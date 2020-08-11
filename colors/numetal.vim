@@ -16,26 +16,26 @@ endif
 let g:colors_name="numetal"
 
 " Extra colors
-let s:black2 = ["#2e282e", 8]
+let s:black2 = ["#261317", 8]
 let s:black3 = ["#433a4a", 8]
 
 " Base 16
-let s:black = ["#26232b", 0]
-let s:bblack = ["#5f5861", 8]
-let s:red = ["#f53a55", 1]
-let s:bred = ["#cf4855", 9]
-let s:green = ["#38ce5d", 2]
-let s:bgreen = ["#5ddd7d", 10]
-let s:yellow = ["#e9a44b", 3]
-let s:byellow = ["#e2b356", 11]
-let s:blue = ["#6c98ed", 4]
-let s:bblue = ["#a08eff", 12]
-let s:magenta = ["#e36ca6", 5]
-let s:bmagenta = ["#bb7afd", 13]
-let s:cyan = ["#56b6c2", 6]
-let s:bcyan = ["#59bcd7", 14]
-let s:white = ["#e2d2af", 7]
-let s:bwhite = ["#b6a889", 15]
+let s:black = ["#1c080c", 0]
+let s:bblack = ["#735B63", 8]
+let s:red = ["#D75164", 1]
+let s:bred = ["#E36072", 9]
+let s:green = ["#9BBE51", 2]
+let s:bgreen = ["#5FA840", 10]
+let s:yellow = ["#E9A44B", 3]
+let s:byellow = ["#F29926", 11]
+let s:blue = ["#8C8ABD", 4]
+let s:bblue = ["#8E87DE", 12]
+let s:magenta = ["#BB7CAD", 5]
+let s:bmagenta = ["#B06DAC", 13]
+let s:cyan = ["#8AAB9E", 6]
+let s:bcyan = ["#65AAB1", 14]
+let s:white = ["#CBBB98", 7]
+let s:bwhite = ["#D9BEBE", 15]
 
 let g:terminal_color_0 = s:black[0]
 let g:terminal_color_1 = s:red[0]
@@ -88,7 +88,6 @@ call s:HL('CursorLineNR', s:byellow)
 call s:HL('ColorColumn', s:bblack, s:black2)
 call s:HL('CursorLine', 'NONE', s:black2)
 call s:HL('Normal', s:white, s:black)
-call s:HL('Boolean', s:yellow)
 hi link Normal NormalFloat
 hi link Normal NormalNC
 
@@ -101,36 +100,37 @@ call s:HL('Search', s:black, s:byellow)
 call s:HL('IncSearch', s:bblack, s:yellow, 'undercurl')
 call s:HL('SpellBad', s:black, s:red, 'undercurl')
 call s:HL('SpellLocal', s:black, s:yellow, 'undercurl')
-call s:HL('SpellRare', s:black, s:bmagenta, 'undercurl')
+call s:HL('SpellRare', s:black, s:red, 'undercurl')
 
-call s:HL('Constant', s:magenta)
+call s:HL('Boolean', s:bblue)
+call s:HL('Constant', s:white)
 call s:HL('Character', s:red)
-call s:HL('String', s:yellow)
-call s:HL('Identifier', s:bmagenta)
-call s:HL('Function', s:bblue)
+call s:HL('String', s:green)
+call s:HL('Identifier', s:red)
+call s:HL('Function', s:blue)
 call s:HL('Statement', s:red)
 call s:HL('Conditional', s:red)
 call s:HL('Repeat', s:red)
 call s:HL('Label', s:red)
-call s:HL('Operator', s:white)
+call s:HL('Operator', s:cyan)
 call s:HL('Keyword', s:red)
 call s:HL('Exception', s:red)
 
-call s:HL('PreProc', s:cyan)
-call s:HL('Include', s:cyan)
-call s:HL('Define', s:cyan)
+call s:HL('PreProc', s:green)
+call s:HL('Include', s:green)
+call s:HL('Define', s:green)
 call s:HL('Macro', s:red, 'none', 'none')
-call s:HL('PreCondit', s:cyan)
+call s:HL('PreCondit', s:green)
 
-call s:HL('Type', s:bblue, 'none', 'none')
-call s:HL('StorageClass', s:yellow)
+call s:HL('Type', s:yellow, 'none', 'none')
+call s:HL('StorageClass', s:red)
 call s:HL('Structure', s:yellow)
-call s:HL('Typedef', s:yellow)
+call s:HL('Typedef', s:magenta)
 
 call s:HL('Special', s:red)
-call s:HL('SpecialChar', s:red)
-call s:HL('Delimiter', s:red)
-call s:HL('Debug', s:red)
+call s:HL('SpecialChar', s:green)
+call s:HL('Delimiter', s:white)
+call s:HL('Debug', s:white)
 
 call s:HL('Error', s:black, s:red)
 
@@ -169,9 +169,46 @@ call s:HL('MatchParen', s:white, s:bblack)
 
 call s:HL('Comment', s:bblack)
 call s:HL('SpecialComment', s:red)
-call s:HL('TODO', s:byellow, 'NONE')
+call s:HL('TODO', s:byellow, 'NONE', 'bold')
 call s:HL('DiffAdded', s:green, 'NONE')
-
-call s:HL('typescriptClassName', s:bblue, 'none', 'bold')
-
+call s:HL('typescriptClassName', s:white, 'none')
+call s:HL('typescriptClassKeyword', s:red, 'none')
+call s:HL('typescriptTypeReference', s:yellow, 'none')
+call s:HL('typescriptMethodAccessor', s:red, 'none')
+call s:HL('typescriptInterfaceKeyword', s:red)
+call s:HL('typescriptExport', s:red)
+call s:HL('typescriptCall', s:yellow, 'none')
+call s:HL('typescriptAsyncFuncKeyword', s:red)
+call s:HL('typescriptMember', s:red)
+call s:HL('typescriptIdentifier', s:blue)
+call s:HL('typescriptGlobal', s:blue)
+call s:HL('typescriptAliasKeyword', s:red)
+call s:HL('typescriptdotNotation', s:yellow)
+call s:HL('typescriptNumber', s:green)
+call s:HL('typescriptTestGlobal', s:bblue)
+"
 call s:HL('illuminatedWord', 'none', s:black3, 'underline')
+"
+call s:HL('rubyInstanceVariable', s:magenta)
+call s:HL('rubyConstant', s:yellow)
+call s:HL('rubyMethodName', s:white)
+" call s:HL('rubyClassName', s:magenta)
+call s:HL('rubyDefine', s:red)
+call s:HL('rubySymbol', s:white, 'none', 'bold')
+call s:HL('rubyHelper', s:magenta)
+call s:HL('rubyInteger', s:green)
+call s:HL('rubyMethodName', s:blue)
+call s:HL('rubyInclude', s:red)
+" call s:HL('rubyDefine', s:blue)
+
+" ale
+call s:HL('ALEWarningSign', s:yellow, 'none')
+call s:HL('ALEErrorSign', s:red, 'none')
+" call s:HL('CocInfoSign', s:magenta, 'none')
+" call s:HL('CocHintSign', s:green, 'none')
+
+" coc
+call s:HL('CocErrorSign', s:yellow, 'none')
+call s:HL('CocWarningSign', s:yellow, 'none')
+call s:HL('CocInfoSign', s:magenta, 'none')
+call s:HL('CocHintSign', s:green, 'none')

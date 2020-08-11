@@ -1,27 +1,31 @@
-let s:bblack = ["#433a4a", 8]
-let s:black = ["#26232b", 0]
-let s:blue = ["#6c98ed", 4]
-let s:bmagenta = ["#bb7afd", 12]
-let s:red = ["#f53a55", 1]
+let s:black2 = ["#261317", 8]
+let s:black3 = ["#211416", 8]
+let s:black = ["#1C080C", 0]
+let s:bblack = ["#885265", 8]
+let s:blue = ["#8C8ABD", 4]
+let s:bmagenta = ["#B06DAC", 13]
+let s:yellow = ["#E9A44B", 3]
+let s:red = ["#D75164", 1]
 let s:white = ["#e2d2af", 7]
-let s:yellow = ["#e9a44b", 3]
+let s:byellow = ["#F29926", 11]
+let s:green = ["#9BBE51", 2]
 
-let s:normal1   = [s:black[0],  s:blue[0],   s:black[1],  s:blue[1]]
-let s:normal2   = [s:white[0],  s:bblack[0], s:white[1],  s:bblack[1]]
-let s:normal3   = [s:white[0],  s:bblack[0], s:white[1],  s:bblack[1]]
-let s:inactive1 = [s:white[0], s:bblack[0], s:white[1], s:bblack[1]]
-let s:inactive2 = [s:white[0], s:bblack[0], s:white[1], s:bblack[1]]
-let s:inactive3 = [s:white[0], s:bblack[0], s:white[1], s:bblack[1]]
+let s:normal1   = [s:black[0],  s:bmagenta[0],   s:black[1],  s:bmagenta[1]]
+let s:normal2   = [s:white[0],  s:black2[0], s:white[1],  s:black2[1]]
+let s:normal3   = [s:white[0],  s:black2[0], s:white[1],  s:black2[1]]
+let s:inactive1 = [s:white[0], s:black2[0], s:white[1], s:black2[1]]
+let s:inactive2 = [s:white[0], s:black2[0], s:white[1], s:black2[1]]
+let s:inactive3 = [s:white[0], s:black2[0], s:white[1], s:black2[1]]
 let s:insert1   = [s:black[0],  s:red[0],    s:black[1],  s:red[1]]
 let s:insert2   = [s:black[0],  s:red[0],    s:black[1],  s:red[1]]
-let s:insert3   = [s:white[0],  s:bblack[0], s:white[1],  s:bblack[1]]
-let s:replace1  = [s:black[0],  s:bmagenta[0], s:black[1],  s:bmagenta[1]]
-let s:replace2  = [s:black[0],  s:bmagenta[0], s:black[1],  s:bmagenta[1]]
-let s:replace3  = [s:white[0],  s:bblack[0], s:white[1],  s:bblack[1]]
-let s:visual1   = [s:black[0],  s:yellow[0], s:black[1],  s:yellow[1]]
-let s:visual2   = [s:black[0],  s:yellow[0], s:black[1],  s:yellow[1]]
-let s:visual3   = [s:white[0],  s:bblack[0], s:white[1],  s:bblack[1]]
-let s:warning   = [s:black[0],  s:yellow[0], s:black[1],  s:yellow[1]]
+let s:insert3   = [s:white[0],  s:black2[0], s:white[1],  s:black2[1]]
+let s:replace1  = [s:black[0],  s:byellow[0], s:black[1],  s:byellow[1]]
+let s:replace2  = [s:black[0],  s:byellow[0], s:black[1],  s:byellow[1]]
+let s:replace3  = [s:white[0],  s:black2[0], s:white[1],  s:black2[1]]
+let s:visual1   = [s:black[0],  s:byellow[0], s:black[1],  s:byellow[1]]
+let s:visual2   = [s:black[0],  s:byellow[0], s:black[1],  s:byellow[1]]
+let s:visual3   = [s:white[0],  s:black2[0], s:white[1],  s:black2[1]]
+let s:warning   = [s:black[0],  s:byellow[0], s:black[1],  s:byellow[1]]
 let s:error     = [s:black[0],  s:red[0],    s:black[1],  s:red[1]]
 
 if exists('g:airline_theme')
@@ -43,7 +47,10 @@ if exists('g:airline_theme')
   let g:airline#themes#numetal#palette.inactive.airline_error   = s:error
 
   let g:airline#themes#numetal#palette.tabline = {
-        \ 'airline_tab': [s:white[0], s:bblack[0], s:white[1], s:bblack[1], ''],
-        \ 'airline_tabsel':  [s:black[0], s:blue[0], s:black[1], s:blue[1], '']
+        \ 'airline_tab': [s:black[0], s:bblack[0], s:black[1], s:bblack[1], ''],
+        \ 'airline_tabsel':  [s:black[0], s:bmagenta[0], s:black[1], s:bmagenta[1], ''],
+        \ 'airline_tabtype':['#afd700', '#204d20','148','22'],
+        \ 'airline_tabmod': [s:black[0], s:bmagenta[0], s:black[1], s:bmagenta[1]],
+        \ 'airline_tabmod_unsel': [s:black[0], s:red[0], s:black[1], s:red[1]],
         \ }
 endif
