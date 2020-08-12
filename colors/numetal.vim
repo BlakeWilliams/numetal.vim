@@ -19,14 +19,18 @@ let g:colors_name="numetal"
 let s:black2 = ["#261317", 8]
 let s:black3 = ["#433a4a", 8]
 
-" Base 16
+" bg/fg
 let s:black = ["#1c080c", 0]
 let s:bblack = ["#735B63", 8]
+let s:white = ["#CBBB98", 7]
+let s:bwhite = ["#D9BEBE", 15]
+
+" colors
 let s:red = ["#D75164", 1]
 let s:bred = ["#E36072", 9]
-let s:green = ["#9BBE51", 2]
+let s:green = ["#8BA05D", 2]
 let s:bgreen = ["#5FA840", 10]
-let s:yellow = ["#E9A44B", 3]
+let s:yellow = ["#E9A956", 3]
 let s:byellow = ["#F29926", 11]
 let s:blue = ["#8C8ABD", 4]
 let s:bblue = ["#8E87DE", 12]
@@ -34,8 +38,6 @@ let s:magenta = ["#BB7CAD", 5]
 let s:bmagenta = ["#B06DAC", 13]
 let s:cyan = ["#8AAB9E", 6]
 let s:bcyan = ["#65AAB1", 14]
-let s:white = ["#CBBB98", 7]
-let s:bwhite = ["#D9BEBE", 15]
 
 let g:terminal_color_0 = s:black[0]
 let g:terminal_color_1 = s:red[0]
@@ -91,7 +93,7 @@ call s:HL('Normal', s:white, s:black)
 hi link Normal NormalFloat
 hi link Normal NormalNC
 
-call s:HL('Pmenu', s:white, s:black3)
+call s:HL('Pmenu', s:white, s:black2)
 call s:HL('PmenuSel', s:black, s:yellow)
 call s:HL('PmenuSbar', 'NONE', s:white)
 call s:HL('PmenuThumb', 'NONE', s:black2)
