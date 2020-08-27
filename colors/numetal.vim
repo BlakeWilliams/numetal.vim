@@ -16,27 +16,27 @@ endif
 let g:colors_name="numetal"
 
 " Extra colors
-let s:black2 = ["#261317", 8]
+let s:black2 = ["#25343e", 8]
 let s:black3 = ["#433a4a", 8]
 
 " bg/fg
-let s:black = ["#1c080c", 0]
-let s:bblack = ["#735B63", 8]
-let s:white = ["#CBBB98", 7]
-let s:bwhite = ["#D9BEBE", 15]
+let s:black = ["#15242e", 0]
+let s:bblack = ["#5c5d6a", 8]
+let s:white = ["#ded5ba", 7]
+let s:bwhite = ["#b9b6aa", 15]
 
 " colors
-let s:red = ["#D75164", 1]
-let s:bred = ["#E36072", 9]
-let s:green = ["#8BA05D", 2]
+let s:red = ["#cc7185", 1]
+let s:bred = ["#cc7185", 9]
+let s:green = ["#aab479", 2]
 let s:bgreen = ["#5FA840", 10]
-let s:yellow = ["#E9A956", 3]
+let s:yellow = ["#d5b27c", 3]
 let s:byellow = ["#F29926", 11]
-let s:blue = ["#8C8ABD", 4]
+let s:blue = ["#78aace", 4]
 let s:bblue = ["#8E87DE", 12]
-let s:magenta = ["#BB7CAD", 5]
+let s:magenta = ["#c796b8", 5]
 let s:bmagenta = ["#B06DAC", 13]
-let s:cyan = ["#8AAB9E", 6]
+let s:cyan = ["#81b1ae", 6]
 let s:bcyan = ["#65AAB1", 14]
 
 let g:terminal_color_0 = s:black[0]
@@ -104,7 +104,7 @@ call s:HL('SpellBad', s:black, s:red, 'undercurl')
 call s:HL('SpellLocal', s:black, s:yellow, 'undercurl')
 call s:HL('SpellRare', s:black, s:red, 'undercurl')
 
-call s:HL('Boolean', s:bblue)
+call s:HL('Boolean', s:magenta)
 call s:HL('Constant', s:white)
 call s:HL('Character', s:red)
 call s:HL('String', s:green)
@@ -191,7 +191,7 @@ call s:HL('typescriptTestGlobal', s:bblue)
 "
 call s:HL('illuminatedWord', 'none', s:black3, 'underline')
 "
-call s:HL('rubyInstanceVariable', s:magenta)
+call s:HL('rubyInstanceVariable', s:blue)
 call s:HL('rubyConstant', s:yellow)
 call s:HL('rubyMethodName', s:white)
 " call s:HL('rubyClassName', s:magenta)
