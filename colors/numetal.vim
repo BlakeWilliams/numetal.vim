@@ -16,27 +16,27 @@ endif
 let g:colors_name="numetal"
 
 " Extra colors
-let s:black2 = ["#25343e", 8]
-let s:black3 = ["#433a4a", 8]
+let s:black2 = ["#1a303f", 8]
+let s:black3 = ["#3d5565", 8]
 
 " bg/fg
 let s:black = ["#15242e", 0]
-let s:bblack = ["#5c5d6a", 8]
-let s:white = ["#ded5ba", 7]
+let s:bblack = ["#446073", 8]
+let s:white = ["#cac3ac", 7]
 let s:bwhite = ["#b9b6aa", 15]
 
 " colors
-let s:red = ["#cc7185", 1]
+let s:red = ["#ee6978", 1]
 let s:bred = ["#cc7185", 9]
 let s:green = ["#aab479", 2]
 let s:bgreen = ["#5FA840", 10]
-let s:yellow = ["#d5b27c", 3]
+let s:yellow = ["#ebb076", 3]
 let s:byellow = ["#F29926", 11]
-let s:blue = ["#78aace", 4]
+let s:blue = ["#7ca6c4", 4]
 let s:bblue = ["#8E87DE", 12]
-let s:magenta = ["#c796b8", 5]
+let s:magenta = ["#c993b8", 5]
 let s:bmagenta = ["#B06DAC", 13]
-let s:cyan = ["#81b1ae", 6]
+let s:cyan = ["#89bdb6", 6]
 let s:bcyan = ["#65AAB1", 14]
 
 let g:terminal_color_0 = s:black[0]
@@ -100,9 +100,9 @@ call s:HL('PmenuThumb', 'NONE', s:black2)
 call s:HL('QuickFixLine', s:black, s:yellow)
 call s:HL('Search', s:black, s:byellow)
 call s:HL('IncSearch', s:bblack, s:yellow, 'undercurl')
-call s:HL('SpellBad', s:black, s:red, 'undercurl')
-call s:HL('SpellLocal', s:black, s:yellow, 'undercurl')
-call s:HL('SpellRare', s:black, s:red, 'undercurl')
+call s:HL('SpellBad', s:red, 'none', 'undercurl')
+call s:HL('SpellLocal', s:yellow, 'none', 'undercurl')
+call s:HL('SpellRare', s:red, 'none', 'undercurl')
 
 call s:HL('Boolean', s:magenta)
 call s:HL('Constant', s:white)
@@ -114,7 +114,7 @@ call s:HL('Statement', s:red)
 call s:HL('Conditional', s:red)
 call s:HL('Repeat', s:red)
 call s:HL('Label', s:red)
-call s:HL('Operator', s:cyan)
+call s:HL('Operator', s:magenta)
 call s:HL('Keyword', s:red)
 call s:HL('Exception', s:red)
 
@@ -156,6 +156,8 @@ call s:HL('Title', s:red)
 
 call s:HL('Conceal', s:bblack)
 call s:HL('Directory', s:bblue)
+call s:HL('NetrwDir', s:blue)
+call s:HL('NetrwClassify', s:magenta)
 call s:HL('NetrwSymlink', s:green)
 call s:HL('EndOfBuffer', s:bblack)
 call s:HL('VertSplit', s:black2, s:black2)
@@ -169,7 +171,7 @@ call s:HL('NonText', s:bblack)
 
 call s:HL('MatchParen', s:white, s:bblack)
 
-call s:HL('Comment', s:bblack)
+call s:HL('Comment', s:bblack, 'none', 'italic')
 call s:HL('SpecialComment', s:red)
 call s:HL('TODO', s:byellow, 'NONE', 'bold')
 call s:HL('DiffAdded', s:green, 'NONE')
@@ -186,17 +188,19 @@ call s:HL('typescriptIdentifier', s:blue)
 call s:HL('typescriptGlobal', s:blue)
 call s:HL('typescriptAliasKeyword', s:red)
 call s:HL('typescriptdotNotation', s:yellow)
-call s:HL('typescriptNumber', s:green)
+call s:HL('typescriptNumber', s:magenta)
 call s:HL('typescriptTestGlobal', s:bblue)
 "
 call s:HL('illuminatedWord', 'none', s:black3, 'underline')
 "
 call s:HL('rubyInstanceVariable', s:blue)
+call s:HL('rubyInterpolationDelimiter', s:yellow)
 call s:HL('rubyConstant', s:yellow)
 call s:HL('rubyMethodName', s:white)
 " call s:HL('rubyClassName', s:magenta)
 call s:HL('rubyDefine', s:red)
-call s:HL('rubySymbol', s:white, 'none', 'bold')
+" call s:HL('rubySymbol', s:white, 'none', 'bold')
+call s:HL('rubySymbol', s:white, 'none')
 call s:HL('rubyHelper', s:magenta)
 call s:HL('rubyInteger', s:green)
 call s:HL('rubyMethodName', s:blue)
